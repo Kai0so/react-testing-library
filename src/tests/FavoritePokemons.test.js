@@ -23,7 +23,6 @@ describe('Testa o componente <FavoritePokemons.js />', () => {
 
     const detailsLink = screen.getByRole('link', { name: /More details/i });
     userEvent.click(detailsLink);
-    history.push('/pokemons/25');
     expect(history.location.pathname).toBe('/pokemons/25');
 
     const addToFavorite = screen.getByLabelText('Pokémon favoritado?');
